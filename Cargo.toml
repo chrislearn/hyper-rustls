@@ -13,7 +13,7 @@ repository = "https://github.com/ctz/hyper-rustls"
 http = "0.2"
 http-body-util = "0.1.0-rc.2"
 hyper = { git = "https://github.com/hyperium/hyper.git", default-features = false, features = ["client", "server"] }
-hyper-util = { git = "https://github.com/chrislearn/hyper-util.git", rev = "8756d6a", features = ["runtime", "http1", "http2", "tcp", "client"] }
+hyper-util = { git = "https://github.com/chrislearn/hyper-util.git", rev = "a736c80", features = ["runtime", "http1", "http2", "tcp", "client"] }
 log = { version = "0.4.4", optional = true }
 rustls-native-certs = { version = "0.6", optional = true }
 rustls = { version = "0.20.1", default-features = false }
