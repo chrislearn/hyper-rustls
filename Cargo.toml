@@ -24,7 +24,7 @@ tower-service = "0.3.2"
 
 [dev-dependencies]
 futures-util = { version = "0.3.1", default-features = false }
-hyper = { git = "https://github.com/hyperium/hyper.git", default-features = false, features = ["client", "server"] }
+hyper = { version = "1.0.0-rc.3", default-features = false, features = ["client", "server"] }
 rustls-pemfile = "1.0.0"
 tokio = { version = "1.0", features = ["io-std", "macros", "net", "rt-multi-thread"] }
 
