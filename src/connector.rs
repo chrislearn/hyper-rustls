@@ -5,7 +5,7 @@ use std::task::{self, Poll};
 use std::{fmt, io};
 
 use hyper::Uri;
-use hyper_util::client::connect::Connection;
+use salvo_utils::client::connect::Connection;
 use tokio::io::{AsyncRead, AsyncWrite};
 use tokio_rustls::TlsConnector;
 
