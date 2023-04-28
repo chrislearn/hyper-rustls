@@ -1,6 +1,6 @@
 [package]
 name = "salvo-rustls"
-version = "0.24.0"
+version = "0.0.1"
 edition = "2021"
 rust-version = "1.57"
 license = "Apache-2.0 OR ISC OR MIT"
