@@ -1,6 +1,6 @@
 [package]
 name = "salvo-rustls"
-version = "0.0.1"
+version = "0.0.3"
 edition = "2021"
 rust-version = "1.57"
 license = "Apache-2.0 OR ISC OR MIT"
@@ -14,7 +14,7 @@ documentation = "https://docs.rs/hyper-rustls/"
 http = "0.2"
 http-body-util = "0.1.0-rc.2"
 hyper = { version = "=1.0.0-rc.3", default-features = false, features = ["client", "server"] }
-salvo-utils = { version = "0.0.1", features = ["runtime", "http1", "http2", "tcp", "client"] }
+salvo-utils = { version = "0.0.3", features = ["runtime", "http1", "http2", "tcp", "client"] }
 log = { version = "0.4.4", optional = true }
 rustls-native-certs = { version = "0.6", optional = true }
 rustls = { version = "0.21.0", default-features = false }
