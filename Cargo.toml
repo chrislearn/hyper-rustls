@@ -1,6 +1,6 @@
 [package]
 name = "salvo-rustls"
-version = "0.0.3"
+version = "0.0.4"
 edition = "2021"
 rust-version = "1.65"
 license = "Apache-2.0 OR ISC OR MIT"
@@ -20,8 +20,8 @@ rustls-native-certs = { version = "0.6", optional = true }
 rustls = { version = "0.21.0", default-features = false }
 tokio = "1.0"
 tokio-rustls = { version = "0.24.0", default-features = false }
-webpki-roots = { version = "0.23", optional = true }
-tower-service = "0.3.2"
+webpki-roots = { version = "0.24", optional = true }
+futures-util = { version = "0.3" }
 
 [dev-dependencies]
 futures-util = { version = "0.3.1", default-features = false }
