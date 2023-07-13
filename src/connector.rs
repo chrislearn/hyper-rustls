@@ -1,7 +1,6 @@
 use std::future::Future;
 use std::pin::Pin;
 use std::sync::Arc;
-use std::task::{self, Poll};
 use std::{fmt, io};
 
 use hyper::Uri;
@@ -46,9 +45,9 @@ where
     }
 }
 
-impl<T> tower_service::Service<Uri> for HttpsConnector<T>
+impl<T> hyper::service::Service<Uri> for HttpsConnector<T>
 where
-    T: tower_service::Service<Uri>,
+    T: hyper::service::Service<Uri>,
     T::Response: Connection + AsyncRead + AsyncWrite + Send + Unpin + 'static,
     T::Future: Send + 'static,
     T::Error: Into<BoxError>,
@@ -60,12 +59,7 @@ where
     type Future =
         Pin<Box<dyn Future<Output = Result<MaybeHttpsStream<T::Response>, BoxError>> + Send>>;
 
-    fn poll_ready(&mut self, cx: &mut task::Context<'_>) -> Poll<Result<(), Self::Error>> {
-        self.http
-            .poll_ready(cx)
-            .map_err(|e| e.into())
-    }
-    fn call(&mut self, dst: Uri) -> Self::Future {
+    fn call(&self, dst: Uri) -> Self::Future {
         // dst.scheme() would need to derive Eq to be matchable;
         // use an if cascade instead
         if let Some(sch) = dst.scheme() {

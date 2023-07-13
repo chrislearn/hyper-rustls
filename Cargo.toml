@@ -12,9 +12,9 @@ documentation = "https://docs.rs/salvo-rustls/"
 
 [dependencies]
 http = "0.2"
-http-body-util = "0.1.0-rc.2"
-hyper = { version = "=1.0.0-rc.3", default-features = false, features = ["client", "server"] }
-salvo-utils = { version = "0.0.3", features = ["runtime", "http1", "http2", "tcp", "client"] }
+http-body-util = "0.1.0-rc.3"
+hyper = { version = "=1.0.0-rc.4", default-features = false, features = ["client", "server"] }
+salvo-utils = { version = "0.0.4", features = ["runtime", "http1", "http2", "tcp", "client"] }
 log = { version = "0.4.4", optional = true }
 rustls-native-certs = { version = "0.6", optional = true }
 rustls = { version = "0.21.0", default-features = false }
@@ -25,7 +25,7 @@ futures-util = { version = "0.3" }
 
 [dev-dependencies]
 futures-util = { version = "0.3.1", default-features = false }
-hyper = { version = "=1.0.0-rc.3", default-features = false, features = ["client", "server"] }
+hyper = { version = "=1.0.0-rc.4", default-features = false, features = ["client", "server"] }
 rustls = { version = "0.21.0", default-features = false, features = ["tls12"] }
 rustls-pemfile = "1.0.0"
 tokio = { version = "1.0", features = ["io-std", "macros", "net", "rt-multi-thread"] }
